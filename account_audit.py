@@ -23,7 +23,17 @@ def generate_image(host, text):
     try:
         font = ImageFont.load_default()
         lines = text.split('\n')
-        width = max(font.getsize(line)[0] for line in lines) + 40
+        # 兼容新版 Pillow
+        widths = []
+        for line in lines:
+            if hasattr(font, "getbbox"):
+                # 新版 pillow 用 getbbox
+                bbox = font.getbbox(line)
+                width = bbox[2] - bbox[0]
+            else:
+                width = font.getsize(line)[0]
+            widths.append(width)
+        width = max(widths) + 40
         height = len(lines) * 18 + 40
         img = Image.new('RGB', (width, height), (0, 0, 0))
         draw = ImageDraw.Draw(img)
