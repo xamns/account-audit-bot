@@ -21,5 +21,5 @@
 於命令提示字元(cmd)執行：
 
 ```bash
-git clone https://github.com/你帳號/account-audit-bot.git
+git clone https://github.com/xamns/account-audit-bot.git
 cd account-audit-bot
