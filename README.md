@@ -35,7 +35,6 @@ python account_audit.py
 ✅ 圖片已產生: ./output_accounts\server03_accounts.png
 
 ✅ 帳號總結: ./output_accounts\account_summary.txt
-
 注意事項
 本專案僅供教學與自動化概念演示，無任何真實主機帳號、密碼資訊。
 
@@ -43,3 +42,4 @@ python account_audit.py
 
 授權 License
 本專案採用 MIT License，詳見 LICENSE。
+
